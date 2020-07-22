@@ -1,13 +1,13 @@
 import { TestBed } from '@angular/core/testing';
 
-import { GnomesService } from './gnomes.service';
+import { GnomeService } from './gnome.service';
 
 describe('GnomesService', () => {
-  let service: GnomesService;
+  let service: GnomeService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    service = TestBed.inject(GnomesService);
+    service = TestBed.inject(GnomeService);
   });
 
   it('should be created', () => {
