@@ -8,4 +8,5 @@ export class Gnome {
   height: number;
   hair_color: string;
   professions: string[];
+  friends?: Gnome[];
 }
