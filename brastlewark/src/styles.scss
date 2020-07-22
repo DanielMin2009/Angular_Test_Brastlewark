@@ -1,1 +1,43 @@
-/* You can add global styles to this file, and also import other style files */
+/* COLORS */
+$dark: #6b6863;
+$brown: #a36846;
+$white: #f6f5f3;
+$gold: #d0b38b;
+$blue: #485368;
+$green: #3b5847;
+$carmine: #8e5755;
+
+// FONTS
+@mixin commonText {
+    font: {
+        font-family: "FS Siena Regular", Georgia, "Times New Roman", Times, serif !important;
+        size: 0.92rem;
+        letter-spacing: 0.05px;
+    }
+    color: $dark;
+}
+// Selector
+::selection {
+    color: #fff;
+    background: $brown;
+}
+
+// Correction Default Styles
+button:focus {
+    outline: none;
+    outline: none;
+}
+:focus {
+    outline: -webkit-focus-ring-color auto 0px;
+    outline: -ms-focus-ring-color auto 0px;
+    outline: -o-focus-ring-color auto 0px;
+    outline: -moz-focus-ring-color auto 0px;
+}
+
+// Common Styles
+body {
+    margin: 0;
+    padding: 0;
+    @include commonText;
+    color: $dark;
+}
