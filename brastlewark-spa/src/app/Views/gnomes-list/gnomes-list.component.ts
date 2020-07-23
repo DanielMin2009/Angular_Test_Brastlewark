@@ -10,6 +10,8 @@ export class GnomesListComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+
+    
   }
 
 }
