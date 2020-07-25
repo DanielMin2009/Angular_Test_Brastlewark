@@ -1,7 +1,14 @@
-<div class="jumbotron">
-    <h1 class="display-4">Brastlewark SPA</h1>
-    <p class="lead">Welcome to Gnomes Town. This a new</p>
-    <hr class="my-4">
-    <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
-    <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
-</div>
+<!-- <main class="container mTop animated fadeIn fast no-gutters">
+    <div class="card-columns" *ngFor="let gnome of gnomes.Brastlewark">
+        <div class="card animated fadeIn fast">
+            <div class="card-body">
+                <h5 class="card-title">{{gnome.name}}</h5>
+                <button type="button" class="btn">View</button>
+            </div>
+        </div>
+    </div>
+
+</main> -->
+
+    <app-gnome-card *ngFor="let gnome of gnomes.Brastlewark" [gnome]="gnome" (selectedGnome)="viewGnome($event)"></app-gnome-card>
+    <!-- el selectedGnome es el Output que viene de este componente y llama al método viewGnome pasandole el evento click desde app-gnome-card-->

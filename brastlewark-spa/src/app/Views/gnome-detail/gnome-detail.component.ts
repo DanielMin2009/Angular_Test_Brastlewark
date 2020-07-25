@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { GnomeService } from '../../Services/gnome.service';
 
 @Component({
   selector: 'app-gnome-detail',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GnomeDetailComponent implements OnInit {
 
-  constructor() { }
+  public gnomes = [];
+
+  constructor(private _gnomeService: GnomeService) { }
 
   ngOnInit(): void {
+    this._gnomeService.get_gnomesData()
+    .subscribe(data => this.gnomes = data);
   }
-
 }
+ 
