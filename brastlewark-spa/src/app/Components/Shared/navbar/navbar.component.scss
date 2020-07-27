@@ -6,9 +6,6 @@
     width: 100%;
     z-index: 2;
 }
-// .p30 {
-//     padding: 0 30px;
-// }
 .navbar {
     padding: 0.8rem 2rem;
 }
@@ -50,12 +47,12 @@
         padding: 1.26rem;
     }
     @media (min-width: 1200px) {
-        padding: 0 1.26rem;
+        padding: 0.5rem 1.26rem;
     }
 }
 .nav-link {
     @media (min-width: 1200px) {
-        padding: 0 1.26rem;
+        padding: 0.5rem 1.26rem;
     }
     @media (max-width: 1200px) {
         padding: 0.26rem 1.26rem;
@@ -72,7 +69,7 @@ p {
 .nav-link,
 p {
     color: lighten($color: $dark, $amount: 6%);
-    transition: all ease-in .25s;
+    transition: all ease-in 0.25s;
 }
 .dropdown-toggle::after {
     display: inline-block;
@@ -188,4 +185,39 @@ input,
     top: 50%;
     transform: rotate(45deg);
     transition: top 0.2s, transform 0.2s 0.2s;
+}
+
+.searchGrid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr;
+    grid-column-gap: 0.25rem;
+    grid-row-gap: 0.25rem;
+    justify-items: stretch;
+    align-items: stretch;
+    @media (min-width: 1200px) {
+        padding: 0 1.26rem;
+    }
+    @media (max-width: 1200px) {
+        padding: .26rem 1.26rem;
+    }
+    .btn {
+        font-size: inherit;
+        background-color: $carmine;
+        box-shadow: inset 0 0 0 0 $white;
+        color: $white;
+        &:hover {
+            box-shadow: inset 0 0 0 50px $white;
+            color: $carmine;
+        }
+    }
+    input {
+        padding: 0.46rem 1rem !important;
+    }
+    .btn,
+    input {
+        width: 100%;
+        padding: 0.46rem 0.46rem;
+        border-radius: 0.66rem;
+    }
 }

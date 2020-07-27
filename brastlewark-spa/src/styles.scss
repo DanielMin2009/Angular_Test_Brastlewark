@@ -48,19 +48,18 @@ p {
   }
   color: $dark;
 }
-@mixin commonButton { 
-    color: $carmine;
-    border: 1px solid $carmine;
-    width: 33.3%;
-    padding: 0.46rem 1.46rem;
-    border-radius: 0.66rem;
-    cursor: pointer;
-    box-shadow: inset 0 0 0 0 $carmine;
-    -webkit-transition: all ease 0.25s;
-    -moz-transition: all ease 0.25s;
-    transition: all ease 0.25s;
+@mixin commonButton {
+  color: $carmine;
+  border: 1px solid $carmine;
+  width: 50%;
+  padding: 0.46rem 0.46rem;
+  border-radius: 0.66rem;
+  cursor: pointer;
+  box-shadow: inset 0 0 0 0 $carmine;
+  -webkit-transition: all ease 0.25s;
+  -moz-transition: all ease 0.25s;
+  transition: all ease 0.25s;
 }
-
 
 $default-font: "FS Siena Regular", Georgia, "Times New Roman", Times, serif !important;
 // Other Variables
@@ -102,12 +101,11 @@ body {
   padding-left: 0;
 }
 hr {
-  width: 6rem;
-  height: .3rem;
-  margin: 1.8rem 0 2.6rem 0;
-  background-color: $gold;
+  width: 4.7rem;
+  height: 0.3rem;
+  margin: 1.46rem 0 2.6rem 0;
+  background-color: #d0b38b;
   border-top: transparent;
-  border-radius: .3rem;
 }
 // Animations
 .animated {
@@ -137,4 +135,3 @@ hr {
 .fadeIn {
   animation-name: fadeIn;
 }
-

@@ -24,14 +24,14 @@
                         <ul class="navbar-nav ml-auto">
 
                             <li class="nav-item">
-                                Filter Gnomes by:
+                                Filter by:
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" [routerLink]="['gnomes-list']">All</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link dropdown-toggle" id="mega-two" role="button"
-                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <a class="nav-link dropdown-toggle" id="mega-two" role="button" data-toggle="dropdown"
+                                    aria-haspopup="true" aria-expanded="false">
                                     Age
                                 </a>
                                 <div class="dropdown-menu mega-area" aria-labelledby="mega-two">
@@ -57,8 +57,8 @@
                                 </div>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link dropdown-toggle" id="mega-two" role="button"
-                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <a class="nav-link dropdown-toggle" id="mega-two" role="button" data-toggle="dropdown"
+                                    aria-haspopup="true" aria-expanded="false">
                                     Weight
                                 </a>
                                 <div class="dropdown-menu mega-area" aria-labelledby="mega-two">
@@ -83,8 +83,8 @@
                                 </div>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link dropdown-toggle" id="mega-two" role="button"
-                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <a class="nav-link dropdown-toggle" id="mega-two" role="button" data-toggle="dropdown"
+                                    aria-haspopup="true" aria-expanded="false">
                                     Height
                                 </a>
                                 <div class="dropdown-menu mega-area" aria-labelledby="mega-two">
@@ -121,8 +121,8 @@
                                 </div>
                             </li> -->
                             <li class="nav-item dropdown menu-area">
-                                <a class="nav-link dropdown-toggle" id="mega-two" role="button"
-                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <a class="nav-link dropdown-toggle" id="mega-two" role="button" data-toggle="dropdown"
+                                    aria-haspopup="true" aria-expanded="false">
                                     Profession
                                 </a>
                                 <div class="dropdown-menu mega-area" aria-labelledby="mega-two">
@@ -135,6 +135,10 @@
                             <!-- <li class="nav-item">
                                 <a class="nav-link" routerLinkActive="active" [routerLink]="['gnome-detail']">Friends</a>
                             </li> -->
+                            <form class="form-inline searchGrid">
+                                <input type="search" placeholder="write a gnome name" aria-label="Search">
+                                <button class="btn" type="submit">Search</button>
+                            </form>
                         </ul>
                     </div>
                 </nav>
