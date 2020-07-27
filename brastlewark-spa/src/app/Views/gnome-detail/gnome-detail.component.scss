@@ -1,0 +1,19 @@
+@import "../../../styles.scss";
+
+.card {
+    @include commonText;
+    border-radius: $border-radius;
+    background-color: $white;
+    border: 1px solid rgba($dark, 18%);
+    background-color: lighten($color: rgba($white, 80%), $amount: 3%);
+    padding: 1rem;
+}
+
+.card-body {
+    padding: 1rem;
+}
+
+.card-title {
+    font-size: 1.66rem;
+    color: $carmine;
+}
