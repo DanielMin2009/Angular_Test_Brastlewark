@@ -1,9 +1,12 @@
-<ng-container >
+<ng-container>
     <div class="card animated fadeIn fast">
         <div class="card-body">
-            <h5 class="card-title">{{gnome.name}}</h5>
+            <figure>
+                <img [src]="gnome.thumbnail" [alt]="gnome.name" class="img-thumb" width="100%">
+            </figure>
+            <h4 class="card-title">{{gnome.name}}</h4>
             <button type="button" class="btn" (click)="viewGnome(gnome.id)">View</button>
-            <!--al hacer click en el card seleccionado se llama al método viewGnome y se le pasa el gnome.id-->
+            <!--on click on the selected card we call viewGnome Method and we pass gnome.id as a parameter-->
         </div>
     </div>
 </ng-container>
@@ -11,17 +14,3 @@
 
 
 
-
-<!-- <div class="card animated fadeIn fast">
-    <img class="card-img-top img-fluid" [src]="gnome.thumbnail" [alt]="gnome.name">
-    <div class="card-body">
-        <h4 class="card-title">{{ gnome.name }}</h4>
-        <p class="card-text"> {{ heroe.bio }} </p>
-        <p class="card-text"><small class="text-muted">{{ heroe.aparicion }}</small></p>
-
-        <button (click)="verHeroe()" type="button" class="btn btn-outline-primary btn-block">
-            Ver más...
-        </button>
-
-    </div>
-</div> -->

@@ -1,14 +1,8 @@
-<!-- <main class="container mTop animated fadeIn fast no-gutters">
-    <div class="card-columns" *ngFor="let gnome of gnomes.Brastlewark">
-        <div class="card animated fadeIn fast">
-            <div class="card-body">
-                <h5 class="card-title">{{gnome.name}}</h5>
-                <button type="button" class="btn">View</button>
-            </div>
-        </div>
+<main class="container mTop animated fadeIn fast no-gutters">
+    <div class="card-columns">
+        <app-gnome-card *ngFor="let gnome of gnomes.Brastlewark" [gnome]="gnome" (selectedGnome)="viewGnome($event)">
+        </app-gnome-card>
+        <!-- el selectedGnome es el Output que viene de este componente y llama al método viewGnome pasandole el evento click desde app-gnome-card-->
     </div>
+</main>
 
-</main> -->
-
-    <app-gnome-card *ngFor="let gnome of gnomes.Brastlewark" [gnome]="gnome" (selectedGnome)="viewGnome($event)"></app-gnome-card>
-    <!-- el selectedGnome es el Output que viene de este componente y llama al método viewGnome pasandole el evento click desde app-gnome-card-->

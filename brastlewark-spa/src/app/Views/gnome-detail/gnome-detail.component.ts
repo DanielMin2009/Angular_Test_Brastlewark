@@ -4,17 +4,26 @@ import { GnomeService } from '../../Services/gnome.service';
 @Component({
   selector: 'app-gnome-detail',
   templateUrl: './gnome-detail.component.html',
-  styleUrls: ['./gnome-detail.component.scss']
+  styleUrls: ['./gnome-detail.component.scss'],
 })
 export class GnomeDetailComponent implements OnInit {
-
   public gnomes = [];
 
-  constructor(private _gnomeService: GnomeService) { }
+  constructor(private _gnomeService: GnomeService) {}
 
   ngOnInit(): void {
-    this._gnomeService.get_gnomesData()
-    .subscribe(data => this.gnomes = data);
+    this.getGnomes();
+  }
+
+  getGnomes(): void {
+    this._gnomeService.get_gnomesData().subscribe(
+      (data) => {
+        console.log('getGnomes', data);
+        this.gnomes = data;
+      },
+      (error) => {
+        alert('error');
+      }
+    );
   }
 }
- 

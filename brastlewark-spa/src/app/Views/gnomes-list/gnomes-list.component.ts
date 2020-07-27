@@ -36,7 +36,7 @@ export class GnomesListComponent implements OnInit {
   viewGnome(gnomeId: number){
     console.log(gnomeId);
     this.router.navigate( ['/gnome', gnomeId]);
-    // con el Output recibido del componente GnomeCard, recibimos el id del selectedGnome y se lo pasamos al ruter para navegar por id
+    // con el Output recibido del componente GnomeCard, recibimos el id del selectedGnome y se lo pasamos al router para navegar por id
   }
 
 
