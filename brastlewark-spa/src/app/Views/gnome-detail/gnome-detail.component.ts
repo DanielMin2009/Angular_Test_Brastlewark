@@ -13,9 +13,7 @@ export class GnomeDetailComponent {
   idx: number;
   gnome: any = {};
 
-  constructor(
-    private activatedRoute: ActivatedRoute
-  ) {
+  constructor(private activatedRoute: ActivatedRoute) {
     this.gnomes = [];
   }
 
@@ -28,6 +26,7 @@ export class GnomeDetailComponent {
         this.gnomes.push(this.gnome);
       }
       console.log(JSON.parse(localStorage.getItem('gnomes')));
+      console.log(localStorage.getItem('gnomes'));
     });
   }
 }

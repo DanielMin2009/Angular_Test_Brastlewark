@@ -1,13 +1,17 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { Gnome } from '../Models/gnome.model';
-import { Observable } from 'rxjs';
+import { Observable, BehaviorSubject } from 'rxjs';
 import { map } from 'rxjs/operators';
 
+
+const INIT_DATA = [];
 @Injectable({
   providedIn: 'root',
 })
 export class GnomeService {
+  
+  private DataStore = new BehaviorSubject(INIT_DATA);
   gnomes: Gnome[];
   gnome: Gnome;
   private baseUrl: string =
@@ -19,9 +23,9 @@ export class GnomeService {
     return this.http.get<Gnome[]>(this.baseUrl);
   }
 
-  getGnome(id: number): Observable<Gnome> {
-    return this.get_gnomesData().pipe(
-      map((gnomes) => gnomes.find((gnome) => gnome.id == id))
-    );
-  }
+  // getGnome(id: number): Observable<Gnome> {
+  //   return this.get_gnomesData().pipe(
+  //     map((gnomes) => gnomes.find((gnome) => gnome.id == id))
+  //   );
+  // }
 }
