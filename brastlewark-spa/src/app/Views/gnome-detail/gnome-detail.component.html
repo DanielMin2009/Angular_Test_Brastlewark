@@ -1,27 +1,37 @@
 <h1 class="animated fadeIn fast mTop">Gnome Detail</h1>
 <hr>
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a [routerLink]="['/']">Home</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Gnome {{ gnome.id }} Detail</li>
+    </ol>
+</nav>
 <main class="container animated fadeIn fast no-gutters">
     <div class="card">
-        <figure>
-            <!-- <img [src]="gnome.thumbnail" [alt]="gnome.name" class="img-thumb" width="100%"> -->
-        </figure>
-        <div class="card-body">
-            <h5 class="card-title">Card title</h5>
+        <div class="col-md-4">
+            <figure>
+                <img [src]="gnome.thumbnail" [alt]="gnome.name" class="img-thumb" width="100%">
+            </figure>
         </div>
-        <div class="row mLateral">
-            <div class="col-12 col-lg-6 myList-2-cols">
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item">Age:</li>
-                    <li class="list-group-item">Height:</li>
-                    <li class="list-group-item">Professions:</li>
-                </ul>
+        <div class="col-md-8">
+            <div class="card-body">
+                <h5 class="card-title">{{ gnome.name }}</h5>
             </div>
-            <div class="col-12 col-lg-6 myList-2-cols">
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item">Weight:</li>
-                    <li class="list-group-item">Hair color: </li>
-                    <li class="list-group-item">Friends:</li>
-                </ul>
+            <div class="row mLateral">
+                <div class="col-12 col-lg-6 myList-2-cols">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Age: {{ gnome.age }}</li>
+                        <li class="list-group-item">Height: {{ gnome.height }}</li>
+                        <li class="list-group-item">Professions: {{ gnome.professions }}</li>
+                    </ul>
+                </div>
+                <div class="col-12 col-lg-6 myList-2-cols">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Weight: {{ gnome.weight }}</li>
+                        <li class="list-group-item">Hair color: {{ gnome.hair_color }}</li>
+                        <li class="list-group-item">Friends: {{ gnome.friends }}</li>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>

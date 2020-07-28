@@ -43,26 +43,26 @@
 }
 .nav-item:first-child {
     color: lighten($color: $dark, $amount: 26%);
-    @media (max-width: 1200px) {
+    @media (max-width: 992px) {
         padding: 1.26rem;
     }
-    @media (min-width: 1200px) {
+    @media (min-width: 992px) {
         padding: 0.5rem 1.26rem;
     }
 }
 .nav-link {
-    @media (min-width: 1200px) {
+    @media (min-width: 992px) {
         padding: 0.5rem 1.26rem;
     }
-    @media (max-width: 1200px) {
+    @media (max-width: 992px) {
         padding: 0.26rem 1.26rem;
     }
 }
 p {
-    @media (min-width: 1200px) {
+    @media (min-width: 992px) {
         padding: 0 0.36rem 0 0;
     }
-    @media (max-width: 1200px) {
+    @media (max-width: 992px) {
         padding: 0.26rem 0;
     }
 }
@@ -195,10 +195,10 @@ input,
     grid-row-gap: 0.25rem;
     justify-items: stretch;
     align-items: stretch;
-    @media (min-width: 1200px) {
+    @media (min-width: 992px) {
         padding: 0 1.26rem;
     }
-    @media (max-width: 1200px) {
+    @media (max-width: 992px) {
         padding: .26rem 1.26rem;
     }
     .btn {

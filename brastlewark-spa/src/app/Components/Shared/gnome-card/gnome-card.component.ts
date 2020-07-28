@@ -21,7 +21,7 @@ export class GnomeCardComponent implements OnInit {
   }
 
   viewGnome(gnomeId) {
-    // This component is inside a father component and it has to emit the click event, passing him the selectedGnome id to the father component. It makes possible to navigate to it's url with gnomeId as a parameter (Output) 
+    // This component is inside a parent component and it has to emit the click event, passing him the selectedGnome id to the father component. It makes possible to navigate to it's url with gnomeId as a parameter (Output) 
     this.selectedGnome.emit(gnomeId);
   }
 

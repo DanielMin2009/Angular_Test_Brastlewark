@@ -104,8 +104,18 @@ hr {
   width: 4.7rem;
   height: 0.3rem;
   margin: 1.46rem 0 2.6rem 0;
-  background-color: #d0b38b;
+  background-color: $gold;
   border-top: transparent;
+}
+.breadcrumb {
+  background-color: transparent;
+}
+a {
+  color: lighten($color: $dark, $amount: 16%);
+}
+.active {
+  transform: all ease 0.15s;
+  color: darken($color: $gold, $amount: 16%);
 }
 // Animations
 .animated {
