@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { GnomeService } from '../../Services/gnome.service';
 import { ActivatedRoute } from '@angular/router';
 import { Gnome } from 'src/app/Models/gnome.model';
-import { of } from 'rxjs';
+import { of, Observable, from } from 'rxjs';
 
 @Component({
   selector: 'app-gnome-detail',
@@ -23,10 +22,17 @@ export class GnomeDetailComponent {
     });
   }
 
-  getGnome(id: number): Gnome {
+  // getGnome(id: number): Gnome {
+  //   this.gnomes = JSON.parse(localStorage.getItem('gnomes'));
+  //   console.log('we have them', this.gnomes);
+  //   return (this.gnome = this.gnomes.find((gnome) => gnome.id === id));
+  // }
+
+  getGnome(id: number): Observable<Gnome> {
     this.gnomes = JSON.parse(localStorage.getItem('gnomes'));
     console.log('we have them', this.gnomes);
-    return (this.gnome = this.gnomes.find((gnome) => gnome.id === id));
+    const GNOME = this.gnomes.filter((gnome)=> gnome.id === id);
+    return from(GNOME);
   }
 }
 
