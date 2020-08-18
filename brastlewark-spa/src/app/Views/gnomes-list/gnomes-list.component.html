@@ -2,7 +2,8 @@
 <hr class="mt5 pb25">
 <main class="container animated fadeIn fast no-gutters">
     <div class="card-columns">
-        <app-gnome-card *ngFor="let gnome of gnomes.Brastlewark" [gnome]="gnome" (selectedGnome)="viewGnome($event)">
+        <!-- *ngFor="let gnome of gnomes.Brastlewark; let i = index" -->
+        <app-gnome-card [gnome]="gnome" *ngFor="let gnome of gnomes.Brastlewark" (selectedGnome)="viewGnome($event)">
         </app-gnome-card>
         <!-- this selectedGnome is the Output that comes from this Component and calls the Method viewGnome. It pass the click event from app-gnome-card -->
     </div>

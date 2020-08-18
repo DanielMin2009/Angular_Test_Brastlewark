@@ -4,14 +4,10 @@ import { Gnome } from '../Models/gnome.model';
 import { Observable, BehaviorSubject } from 'rxjs';
 import { map } from 'rxjs/operators';
 
-
-const INIT_DATA = [];
 @Injectable({
   providedIn: 'root',
 })
 export class GnomeService {
-  
-  private DataStore = new BehaviorSubject(INIT_DATA);
   gnomes: Gnome[];
   gnome: Gnome;
   private baseUrl: string =
@@ -21,6 +17,19 @@ export class GnomeService {
 
   public get_gnomesData(): Observable<Gnome[]> {
     return this.http.get<Gnome[]>(this.baseUrl);
+  }
+
+  searchGnomes(term: string) {
+    let gnomesArr: Gnome[] = [];
+    term = term.toLocaleLowerCase();
+
+    for (let gnome of this.gnomes) {
+      let name = gnome.name.toLocaleLowerCase();
+      if (name.indexOf(term) >= 0) {
+        gnomesArr.push(gnome);
+      }
+    }
+    return gnomesArr;
   }
 
   // getGnome(id: number): Observable<Gnome> {

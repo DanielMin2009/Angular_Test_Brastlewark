@@ -1,19 +1,18 @@
-<!-- <h1>Search: <small>{{ term }}</small></h1>
-<hr>
-
-<div class="row animated fadeIn fast" *ngIf="gnomes.length == 0">
+<h1 class="mTop text-justify">Searching: {{term}}</h1>
+<hr class="mt5 pb25">
+<div class="row animated fadeIn fast" *ngIf="gnomes.length == 0 ">
   <div class="col-md-12">
     <div class="alert alert-info" role="alert">
-      There are not exist mayches with this: {{ term }}
+      <p>There not exist results matching with that term</p>
     </div>
   </div>
 </div>
+<main class="container animated fadeIn fast no-gutters">
+    <div class="card-columns">
+        <!-- *ngFor="let gnome of gnomes.Brastlewark; let i = index" -->
+        <app-gnome-card [gnome]="gnome" *ngFor="let gnome of gnomes" (selectedGnome)="viewGnome($event)">
+        </app-gnome-card>
+        <!-- this selectedGnome is the Output that comes from this Component and calls the Method viewGnome. It pass the click event from app-gnome-card -->
+    </div>
+</main>
 
-
-<div class="card-columns">
-
-<app-heroe-tarjeta [heroe]="foo" [index]="foo.idx"  *ngFor="let foo of heroes"></app-heroe-tarjeta>
-
-
-
-</div> -->

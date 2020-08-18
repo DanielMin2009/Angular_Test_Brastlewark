@@ -1,3 +1,6 @@
+<!-- <div *ngFor="let gnome of Brastlewark.gnomes">
+
+</div> -->
 <h1 class="animated fadeIn fast mTop">Gnome Detail</h1>
 <hr>
 <nav aria-label="breadcrumb">
@@ -15,7 +18,7 @@
         </div>
         <div class="col-md-8">
             <div class="card-body">
-                <h5 class="card-title">{{ gnome.name }}</h5>
+                <h5 class="card-title">{{ gnome.name | uppercase }}</h5>
             </div>
             <div class="row mLateral">
                 <div class="col-12 col-lg-6 myList-2-cols">

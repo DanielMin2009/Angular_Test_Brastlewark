@@ -133,8 +133,8 @@
                                 </div>
                             </li>
                             <form class="form-inline searchGrid">
-                                <input type="search" placeholder="write a gnome name" aria-label="Search">
-                                <button class="btn" type="submit">Search</button>
+                                <input type="search" placeholder="write a gnome name" aria-label="Search" (keyup)="searchGnomes(term.value)" #term>
+                                <button (click)="searchGnomes(term.value)" class="btn" type="button">Search</button>
                             </form>
                         </ul>
                     </div>

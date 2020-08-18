@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { GnomeService } from '../../Services/gnome.service';
 import { Gnome } from 'src/app/Models/gnome.model';
@@ -12,7 +13,11 @@ export class GnomesListComponent implements OnInit {
   public gnomes: any;
   public gnome: Gnome;
 
-  constructor(private _gnomeService: GnomeService, private router: Router) {}
+  constructor(
+    private httpClient: HttpClient,
+    private _gnomeService: GnomeService,
+    private router: Router
+  ) {}
 
   ngOnInit(): void {
     this.getGnomes();
@@ -36,5 +41,17 @@ export class GnomesListComponent implements OnInit {
     // console.log(this.gnomes.Brastlewark[idx]);
     // console.log(this.gnomes);
     // with Output recived from GnomeCard.component, we get the selectedGnome ID and we pass it to the Router to navigate throught ID
+  }
+  searchGnomes(term: string) {
+    let gnomesArr: Gnome[] = [];
+    term = term.toLocaleLowerCase();
+
+    for (let gnome of this.gnomes) {
+      let name = gnome.name.toLocaleLowerCase();
+      if (name.indexOf(term) >= 0) {
+        gnomesArr.push(gnome);
+      }
+    }
+    return gnomesArr;
   }
 }

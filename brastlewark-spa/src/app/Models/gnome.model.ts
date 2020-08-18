@@ -1,6 +1,9 @@
 // API response to GET /gnomes/id
-export class Gnome {
-  // town: string;
+export interface Brastlewark {
+  id: number;
+  name: string;
+}
+export interface Gnome {
   id: number;
   name: string;
   thumbnail: string;
@@ -10,4 +13,7 @@ export class Gnome {
   hair_color: string;
   professions: string[];
   friends?: Gnome[];
+  village: Brastlewark;
 }
+
+
