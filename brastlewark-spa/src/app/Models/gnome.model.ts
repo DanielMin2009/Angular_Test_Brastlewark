@@ -1,7 +1,6 @@
 // API response to GET /gnomes/id
 export interface Brastlewark {
-  id: number;
-  name: string;
+  gonmes: Gnome[];
 }
 export interface Gnome {
   id: number;
